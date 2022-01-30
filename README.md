@@ -57,7 +57,7 @@
 	SEMSEC (SSID, Sem, Sec)<br>
 	CLASS (USN, SSID)<br>
 	SUBJECT (Subcode, Title, Sem, Credits)<br>
-	IAMARKS (USN, Subcode, SSID, Test1, Test2, Test3, FinalIA) Write SQL queries to<br>
+	IAMARKS (USN, Subcode, SSID, Test1, Test2, Test3, FinalIA) <br>Write SQL queries to<br>
 	1. List all the student details studying in fourth semester ‘C’ section.
 	2. Compute the total number of male and female students in each semester and in each
 	section.
@@ -69,3 +69,15 @@
 	If FinalIA = 12 to 16 then CAT = ‘Average’<br>
 	If FinalIA < 12 then CAT = ‘Weak’<br>
 	Give these details only for 8th semester A, B, and C section students.
+
+* Consider the schema for Company Database:<br>
+	EMPLOYEE (SSN, Name, Address, Sex, Salary, SuperSSN, DNo)<br> 
+	DEPARTMENT (DNo, DName, MgrSSN, MgrStartDate)<br> 
+	DLOCATION (DNo,DLoc)<br>
+	PROJECT (PNo, PName, PLocation, DNo)<br>
+	WORKS_ON (SSN, PNo, Hours)<br> 
+	Write SQL queries to
+	1. Make a list of all project numbers for projects that involve an employee whose last name is ‘Scott’, either as a worker or as a manager of the department that controls the project.
+	2. Show the resulting salaries if every employee working on the ‘IoT’ project is given a 10 percent raise.
+	3. Find the sum of the salaries of all employees of the ‘Accounts’ department, as well as the maximum salary, the minimum salary, and the average salary in this department
+	4. Retrieve the name of each employee who works on all the projects controlled by department number 5 (use NOT EXISTS operator). For each department that has more than five employees, retrieve the department number and the number of its employees who are making more than Rs. 6,00,000.
