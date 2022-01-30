@@ -36,7 +36,7 @@
 	must also be deleted.
 	-----
 
-* C. Consider the schema for Movie Database: <br>
+* Consider the schema for Movie Database: <br>
 	ACTOR (Act_id, Act_Name, Act_Gender)<br>
 	DIRECTOR (Dir_id, Dir_Name, Dir_Phone)<br>
 	MOVIES (Mov_id, Mov_Title, Mov_Year, Mov_Lang, Dir_id) MOVIE_CAST (Act_id, Mov_id, Role)<br>
@@ -51,3 +51,21 @@
 		  movie title.
 	5. Update rating of all movies directed by ‘Steven Spielberg’ to 5.
 	-----
+
+* Consider the schema for College Database:<br>
+STUDENT (USN, SName, Address, Phone, Gender)<br>
+SEMSEC (SSID, Sem, Sec)<br>
+CLASS (USN, SSID)<br>
+SUBJECT (Subcode, Title, Sem, Credits)<br>
+IAMARKS (USN, Subcode, SSID, Test1, Test2, Test3, FinalIA) Write SQL queries to<br>
+1. List all the student details studying in fourth semester ‘C’ section.
+2. Compute the total number of male and female students in each semester and in each
+section.
+3. Create a view of Test1 marks of student USN ‘1BI15CS101’ in all subjects.
+4. Calculate the FinalIA (average of best two test marks) and update the
+corresponding table for all students.
+5. Categorize students based on the following criterion:<br>
+If FinalIA = 17 to 20 then CAT = ‘Outstanding’<br>
+If FinalIA = 12 to 16 then CAT = ‘Average’<br>
+If FinalIA < 12 then CAT = ‘Weak’<br>
+Give these details only for 8th semester A, B, and C section students.
