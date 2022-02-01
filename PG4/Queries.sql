@@ -38,6 +38,11 @@ CREATE OR REPLACE PROCEDURE AVGMARKS IS CURSOR C_IAMARKS IS SELECT	GREATEST(TEST
 	CLOSE C_IAMARKS; 
 END;
 
+-- simple solution for 4th query
+
+UPDATE IAMARKS
+SET FINALIA = GREATEST(TEST1+TEST2, TEST2+TEST3, TEST3+TEST1)/2;
+
 -- Categorize students based on the following criterion: If FinalIA = 17 to 20 then CAT = ‘Outstanding’
 -- If FinalIA = 12 to 16 then CAT = ‘Average’ If FinalIA < 12 then CAT = ‘Weak’
 -- Give these details only for 8th semester A, B, and C section students.
