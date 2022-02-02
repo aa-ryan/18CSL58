@@ -1,8 +1,8 @@
 -- Retrieve details of all books in the library – id, title, name of publisher, authors, number of copies in each branch, etc.
 SELECT LB.BRANCH_NAME, B.BOOK_ID,TITLE,
     PUBLISHER_NAME,AUTHOR_NAME, NO_OF_COPIES
-    FROM BOOK B, BOOK_AUTHORS BA, BOOK_COPIES BC,
-    LIBRARY_BRANCH LB WHERE B.BOOK_ID = BA.BOOK_ID AND
+    FROM BOOK B, BOOK_AUTHORS BA, BOOK_COPIES BC, LIBRARY_BRANCH LB 
+    WHERE B.BOOK_ID = BA.BOOK_ID AND
     BA.BOOK_ID = BC.BOOK_ID AND
     BC.BRANCH_ID = LB.BRANCH_ID;
 
